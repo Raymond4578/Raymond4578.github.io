@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zuocheng Dai | Personal Homepage</title>
+  <meta name="description" content="Personal homepage of Zuocheng Dai — Data Scientist, AI Engineer, and researcher in machine learning, LLM systems, and music computing." />
+  <style>
+    :root {
+      --bg: #f8fbff;
+      --bg-soft: #eef6ff;
+      --card: rgba(255, 255, 255, 0.92);
+      --text: #16324f;
+      --muted: #5f7893;
+      --line: rgba(22, 50, 79, 0.12);
+      --accent: #4f8cff;
+      --accent-2: #7ccf9a;
+      --shadow: 0 18px 45px rgba(79, 140, 255, 0.12);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(79, 140, 255, 0.16), transparent 32%),
+        radial-gradient(circle at top right, rgba(124, 207, 154, 0.18), transparent 28%),
+        linear-gradient(180deg, #fffdf8 0%, #f8fbff 48%, #eef6ff 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 5.5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(79, 140, 255, 0.25);
+      border-radius: 999px;
+      color: #3d6fbf;
+      background: rgba(79, 140, 255, 0.08);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      line-height: 1.08;
+      margin: 0 0 1rem;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 62ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.15rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), #76a8ff);
+      color: white;
+      border-color: transparent;
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--text);
+    }
+
+    .hero-card {
+      padding: 1.5rem;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(240,247,255,0.92));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-ring {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, rgba(79, 140, 255, 0.95), rgba(124, 207, 154, 0.92));
+      color: white;
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+      margin-top: 1.25rem;
+    }
+
+    .stat {
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(79, 140, 255, 0.12);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+      max-width: 72ch;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      padding: 1.25rem;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.08rem;
+    }
+
+    .card p,
+    .card li,
+    .timeline-item p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: #3d6fbf;
+      border: 1px solid rgba(79, 140, 255, 0.18);
+      background: rgba(79, 140, 255, 0.08);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      padding: 1.25rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid var(--line);
+    }
+
+    .timeline-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.55rem;
+    }
+
+    .timeline-head strong {
+      font-size: 1.06rem;
+    }
+
+    .timeline-head span {
+      color: #d1d5db;
+      font-size: 0.95rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 0.9rem;
+      color: #3d6fbf;
+      font-weight: 600;
+    }
+
+    .footer {
+      padding: 2.5rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+      margin: 1rem 0 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Zuocheng Dai</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Data Scientist · AI Engineer · Researcher</div>
+        <h1>Building intelligent systems with rigorous data science and practical impact.</h1>
+        <p>
+          I am Zuocheng Dai, a Sydney-based data scientist and AI engineer with a background in statistics,
+          machine learning, LLM systems, and applied research. My work spans agentic AI, retrieval-augmented
+          generation, predictive modelling, and real-world information extraction systems.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn secondary" href="#projects">View projects</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="profile-ring">ZD</div>
+        <h2 style="margin:0 0 0.4rem; font-size:1.35rem;">Quick Profile</h2>
+        <p style="margin:0; color: var(--muted);">
+          MSc Statistical Science, University of Oxford · BSc Honours in Data Science & Statistics,
+          University of Sydney.
+        </p>
+        <div class="stat-grid">
+          <div class="stat">
+            <strong>LLMs</strong>
+            <span>RAG, agents, evaluation</span>
+          </div>
+          <div class="stat">
+            <strong>ML</strong>
+            <span>Python, R, SQL, modelling</span>
+          </div>
+          <div class="stat">
+            <strong>Research</strong>
+            <span>Music computing & AI</span>
+          </div>
+          <div class="stat">
+            <strong>Industry</strong>
+            <span>AI workflows & analytics</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-copy">
+          My interests sit at the intersection of statistical thinking, machine learning, and intelligent systems.
+          I enjoy turning messy, unstructured problems into robust, usable solutions — whether that means building
+          a multi-step LLM extraction pipeline, designing an agent-based research workflow, or developing predictive
+          models grounded in strong evaluation principles.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>What I work on</h3>
+            <p>LLM systems, RAG, agentic AI, machine learning, data pipelines, experimentation, and applied analytics.</p>
+          </div>
+          <div class="card">
+            <h3>What I value</h3>
+            <p>Clarity, technical depth, reproducibility, careful reasoning, and solutions that can actually be deployed.</p>
+          </div>
+          <div class="card">
+            <h3>Long-term direction</h3>
+            <p>Research and engineering at the intersection of AI, creativity, music computing, and human-centred systems.</p>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">SQL</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">LLM Agents</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">Evaluation</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-copy">
+          A mix of industry-facing AI engineering, data science, and research-driven project work.
+        </p>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <div>
+                <strong>AI Engineer Intern · OxValue.AI</strong>
+                <span>London, UK</span>
+              </div>
+              <span>Nov 2025 – Jan 2026</span>
+            </div>
+            <p>
+              Improved an information-extraction AI workflow for real-world company data collection. Upgraded the pipeline
+              from static scraping limitations toward a more robust multi-step LLM-based system, helping improve structured
+              data capture accuracy across practical business cases.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <div>
+                <strong>Statistics Tutor · University of Sydney</strong>
+                <span>Sydney, Australia</span>
+              </div>
+              <span>Past Role</span>
+            </div>
+            <p>
+              Taught applied statistics labs with a focus on helping students connect theory to practical data analysis,
+              modelling intuition, and hands-on implementation.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <div>
+                <strong>Research & Technical Projects</strong>
+                <span>Independent / Academic</span>
+              </div>
+              <span>Ongoing</span>
+            </div>
+            <p>
+              Developed projects in biomedical image translation, graph neural networks, multi-agent AI systems,
+              information retrieval, and music-related machine learning applications.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-copy">
+          A snapshot of projects across AI engineering, modelling, and research-oriented system design.
+        </p>
+        <div class="grid-2">
+          <article class="card">
+            <h3>PerturbAgent: Agentic System for Genetic Perturbation Analysis</h3>
+            <p>
+              Built a multi-agent workflow for biomedical perturbation analysis, combining scheduling, code execution,
+              prediction, interpretation, and reporting into a coherent end-to-end system.
+            </p>
+            <a class="project-link" href="#contact">Ask me about this project →</a>
+          </article>
+
+          <article class="card">
+            <h3>LLM-Based Information Extraction Pipeline</h3>
+            <p>
+              Designed a workflow to transform unstructured company website content into structured datasets using scraping,
+              staged prompts, and model-assisted extraction for downstream business analysis.
+            </p>
+            <a class="project-link" href="#contact">Discuss workflow details →</a>
+          </article>
+
+          <article class="card">
+            <h3>3D Biomedical Image Translation</h3>
+            <p>
+              Compared deep learning approaches for 3D image translation between PET and MRI, including adversarial U-Net,
+              RevGAN, and BPGAN-based methods.
+            </p>
+            <a class="project-link" href="#contact">Learn more →</a>
+          </article>
+
+          <article class="card">
+            <h3>Graph Neural Networks</h3>
+            <p>
+              Implemented graph convolutional models such as GCN and ChebyNet, with a focus on deep learning foundations
+              and experimental analysis.
+            </p>
+            <a class="project-link" href="#contact">See technical highlights →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research Interests</h2>
+        <p class="section-copy">
+          I am especially interested in sound and music computing, singing-related AI tasks, creative machine learning,
+          and intelligent systems that support human creativity, education, and expression.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Music Computing</h3>
+            <p>Singing recognition, voice synthesis, music generation, melody and lyrics modelling, and MIR-related tasks.</p>
+          </div>
+          <div class="card">
+            <h3>Agentic AI Systems</h3>
+            <p>Planning, tool use, memory, self-correction, evaluation, and robust orchestration for research and analysis.</p>
+          </div>
+          <div class="card">
+            <h3>Applied Statistical Thinking</h3>
+            <p>Model comparison, rigorous evaluation, interpretable analysis, and careful reasoning in practical settings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-copy">
+          This template is intentionally static and easy to customise. You can replace the placeholders below with your
+          real links, CV, email, GitHub, LinkedIn, publications, or portfolio items.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Get in touch</h3>
+            <p>Email: your.email@example.com</p>
+            <p style="margin-top:0.5rem;">LinkedIn: linkedin.com/in/your-profile</p>
+            <p style="margin-top:0.5rem;">GitHub: github.com/your-handle</p>
+          </div>
+          <div class="card">
+            <h3>Customisation ideas</h3>
+            <p>Add a real headshot, project links, downloadable CV, publications section, blog posts, or a dark/light theme toggle.</p>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Zuocheng Dai. Built as a static HTML personal homepage.</p>
+    </div>
+  </footer>
+</body>
+</html>
