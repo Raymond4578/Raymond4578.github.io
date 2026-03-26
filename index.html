@@ -348,10 +348,15 @@
       <aside class="hero-card">
         <div class="profile-ring">ZD</div>
         <h2 style="margin:0 0 0.4rem; font-size:1.35rem;">Quick Profile</h2>
-        <p style="margin:0; color: var(--muted);">
+        <!-- <p style="margin:0; color: var(--muted);">
           MSc Statistical Science, University of Oxford · BSc Honours in Data Science & Statistics,
           University of Sydney.
-        </p>
+        </p> -->
+        <ul style="margin:0; color: var(--muted); padding-left: 1.2rem;">
+          <li>MSc in Statistical Science, University of Oxford</li>
+          <li>BAS Honours in Data Science, University of Sydney</li>
+          <li>BSc in Statistics & Music, University of Sydney</li>
+        </ul>
         <div class="stat-grid">
           <div class="stat">
             <strong>LLMs</strong>
@@ -544,9 +549,29 @@
         <div class="grid-2">
           <div class="card">
             <h3>Get in touch</h3>
-            <p>Email: your.email@example.com</p>
-            <p style="margin-top:0.5rem;">LinkedIn: linkedin.com/in/your-profile</p>
-            <p style="margin-top:0.5rem;">GitHub: github.com/your-handle</p>
+            <!-- <p>Email: zuocheng dot dai at outlook dot com</p> -->
+            <p id="email">
+              Email:
+            </p>
+            <script>
+              const user = "zuocheng.dai";
+              const domain = "outlook.com";
+              const email = user + "@" + domain;
+              document.getElementById("email").innerHTML +=
+                `<a href="mailto:${email}">${email}</a>`;
+            </script>
+            <p style="margin-top:0.5rem;">
+              LinkedIn:
+              <a href="http://www.linkedin.com/in/zuocheng-dai-a103b6234/" target="_blank">
+              linkedin.com/in/zuocheng-dai-a103b6234/
+              </a>
+            </p>
+            <p style="margin-top:0.5rem;">
+              GitHub:
+              <a href="http://www.github.com/Raymond4578/" target="_blank">
+              github.com/Raymond4578/
+              </a>
+            </p>
           </div>
           <div class="card">
             <h3>Customisation ideas</h3>
