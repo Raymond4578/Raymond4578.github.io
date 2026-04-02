@@ -164,24 +164,51 @@ h1 {
     letter-spacing: 0.04em;
 }
 
-.stat-grid {
+.modern-stat-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-    margin-top: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+    margin-top: 3rem;
 }
 
-.stat {
-    padding: 1rem;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(79, 140, 255, 0.12);
+.modern-stat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.4); /* 半透明，更有高级感 */
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    text-align: left; /* 内部左对齐更专业 */
 }
 
-.stat strong {
+.modern-stat:hover {
+    transform: translateY(-4px);
+    background: white;
+    box-shadow: var(--shadow);
+    border-color: var(--accent);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+}
+
+.stat-content small {
     display: block;
-    font-size: 1.4rem;
-    margin-bottom: 0.2rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 2px;
+}
+
+.stat-content strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
 }
 
 section {

@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav">
+  <!-- <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#top">Zuocheng Dai</a>
+      <a class="brand" href="#top">Zuocheng (Raymond) Dai</a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -19,25 +19,52 @@
         <a href="#contact">Contact</a>
       </div>
     </div>
+  </nav> -->
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand" style="display: flex; align-items: center; gap: 10px;">
+        <div class="profile-ring" style="width: 40px; height: 40px; font-size: 1rem; margin-bottom: 0;">ZD</div>
+        <span>Zuocheng (Raymond) Dai</span>
+      </div>
+      <div class="nav-links">
+         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <header class="hero" id="top">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Data Scientist · AI Engineer · Researcher</div>
-        <h1>Building intelligent systems with rigorous data science and practical impact.</h1>
-        <p>
-          I am Zuocheng Dai, a Sydney-based data scientist and AI engineer with a background in statistics,
-          machine learning, LLM systems, and applied research. My work spans agentic AI, retrieval-augmented
-          generation, predictive modelling, and real-world information extraction systems.
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn secondary" href="#projects">View projects</a>
-        </div>
+  <!-- <header class="hero" id="top">
+  <div class="container hero-grid">
+    
+    <div>
+      <h1 style="margin-bottom: 0.5rem;">
+        Zuocheng (Raymond) Dai
+      </h1>
+
+      <div class="eyebrow" style="margin-bottom: 1rem;">
+        AI Engineer · LLM & Agent Systems · Data Scientist
       </div>
 
-      <aside class="hero-card">
+      <h2 style="font-size: 2rem; line-height: 1.3; margin-bottom: 1rem;">
+        Building intelligent systems with real-world impact.
+      </h2>
+
+      <p>
+        Data Scientist, focused on building LLM-powered systems 
+        and agentic AI workflows. Experienced in designing end-to-end pipelines from 
+        unstructured data to actionable insights.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
         <div class="profile-ring">ZD</div>
         <h2 style="margin:0 0 0.4rem; font-size:1.35rem;">Quick Profile</h2>
         <ul style="margin:0; color: var(--muted); padding-left: 1.2rem;">
@@ -64,10 +91,69 @@
           </div>
         </div>
       </aside>
-    </div>
-  </header>
+
+  </div>
+</header> -->
 
   <main>
+    <section class="hero" id="top">
+      <div class="container" style="text-align: center;">
+        <div style="margin-bottom: 2rem;">
+          <h1 style="font-size: 1.4rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--text);">
+            Zuocheng (Raymond) Dai
+          </h1>
+          <p style="font-size: 1rem; color: var(--muted); letter-spacing: 0.05em; display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 0 auto;">
+            AI Engineer <span style="opacity: 0.2;">|</span>
+            Data Scientist
+          </p>
+        </div>
+        <h2 style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.2; max-width: 18ch; margin: 0 auto 3rem; letter-spacing: -0.02em;">
+          Building intelligent systems with <span style="color: var(--accent);">real-world impact.</span>
+        </h2>
+      
+
+        <div class="modern-stat-grid">
+          <div class="modern-stat">
+            <span class="stat-icon">🎓</span>
+            <div class="stat-content">
+              <small>Education</small>
+              <strong>MSc in Statistics @ Oxford</strong>
+            </div>
+          </div>
+          <div class="modern-stat">
+            <span class="stat-icon">💼</span>
+            <div class="stat-content">
+              <small>Status</small>
+              <strong>Open for Recruitment</strong>
+            </div>
+          </div>
+          <!-- <div class="modern-stat">
+            <span class="stat-icon">🧠</span>
+            <div class="stat-content">
+              <small>Expertise</small>
+              <strong>LLM & RAG</strong>
+            </div>
+          </div> -->
+          <div class="modern-stat">
+            <span class="stat-icon">📍</span>
+            <div class="stat-content">
+              <small>Location</small>
+              <strong>Sydney, Australia</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    
     <section id="about">
       <div class="container">
         <h2 class="section-title">About</h2>
@@ -164,15 +250,6 @@
           A snapshot of projects across AI engineering, modelling, and research-oriented system design.
         </p>
         <div class="grid-2">
-          <article class="card">
-            <h3>PerturbAgent: Agentic System for Genetic Perturbation Analysis</h3>
-            <p>
-              Built a multi-agent workflow for biomedical perturbation analysis, combining scheduling, code execution,
-              prediction, interpretation, and reporting into a coherent end-to-end system.
-            </p>
-            <a class="project-link" href="#contact">Ask me about this project →</a>
-          </article>
-
           <article class="card">
             <h3>LLM-Based Information Extraction Pipeline</h3>
             <p>
