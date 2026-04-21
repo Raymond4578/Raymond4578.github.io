@@ -12,13 +12,13 @@
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand" style="display: flex; align-items: center; gap: 10px;">
-        <span>Zuocheng (Raymond) Dai</span>
+        <span>Raymond Zuocheng Dai</span>
       </div>
       <div class="nav-links">
          <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
+        <!-- <a href="#projects">Projects</a> -->
+        <!-- <a href="#research">Research</a> -->
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -27,17 +27,17 @@
 
   <main>
     <section class="hero" id="top">
-      <div class="container" style="text-align: center;">
-        <div style="margin-bottom: 2rem;">
-          <h1 style="font-size: 1.4rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--text);">
-            Zuocheng (Raymond) Dai
+      <div class="container hero-content">
+        <div class="hero-intro">
+          <h1 class="hero-name">
+            Raymond Zuocheng Dai
           </h1>
-          <p style="font-size: 1rem; color: var(--muted); letter-spacing: 0.05em; display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 0 auto;">
-            AI Engineer <span style="opacity: 0.2;">|</span>
-            Data Scientist
+          <p class="hero-role">
+            Data Scientist <span style="opacity: 0.2;">|</span>
+            AI Engineer
           </p>
         </div>
-        <h2 style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.2; max-width: 18ch; margin: 0 auto 3rem; letter-spacing: -0.02em;">
+        <h2 class="hero-tagline">
           Building intelligent systems with <span style="color: var(--accent);">real-world impact.</span>
         </h2>
       
@@ -127,53 +127,115 @@
           A mix of industry-facing AI engineering, data science, and research-driven project work.
         </p>
         <div class="timeline">
-          <article class="timeline-item">
+          <article class="card timeline-item">
             <div class="timeline-head">
-              <div>
-                <strong>AI Engineer Intern · OxValue.AI</strong>
-                <span>London, UK</span>
+              <div class="timeline-heading">
+                <h3 class="timeline-role">AI Engineer Intern</h3>
+                <p class="timeline-company">OxValue.AI Limited</p>
               </div>
-              <span>Nov 2025 – Jan 2026</span>
+              <div class="timeline-meta">
+                <span class="timeline-location">London, UK</span>
+                <span class="timeline-date">Nov 2025 - Jan 2026</span>
+              </div>
             </div>
-            <p>
-              Improved an information-extraction AI workflow for real-world company data collection. Upgraded the pipeline
-              from static scraping limitations toward a more robust multi-step LLM-based system, helping improve structured
-              data capture accuracy across practical business cases.
-            </p>
+            <ul class="timeline-points">
+              <li>Built an R&D data extraction pipeline from pharmaceutical company websites to support company valuation analysis.</li>
+              <li>Constructed an end-to-end pipeline combining web search, scraping, and LLM extraction, where the multi-step LLM workflow includes key content filtering, reference-guided information extraction, and structured JSON data generation.</li>
+              <li>Achieved stable data extraction accuracy of 82% across real-world cases, with 15x speed improvement over manual processes. This module is integrated into valuation production and significantly accelerates valuation analysis.</li>
+            </ul>
           </article>
 
-          <article class="timeline-item">
+          <article class="card timeline-item">
             <div class="timeline-head">
-              <div>
-                <strong>Statistics Tutor · University of Sydney</strong>
-                <span>Sydney, Australia</span>
+              <div class="timeline-heading">
+                <h3 class="timeline-role">Data Scientist Intern</h3>
+                <p class="timeline-company">Torr Vision Group, University of Oxford</p>
               </div>
-              <span>Past Role</span>
+              <div class="timeline-meta">
+                <span class="timeline-location">Oxford, UK</span>
+                <span class="timeline-date">Jun 2025 - Sep 2025</span>
+              </div>
             </div>
-            <p>
-              Taught applied statistics labs with a focus on helping students connect theory to practical data analysis,
-              modelling intuition, and hands-on implementation.
-            </p>
+            <ul class="timeline-points">
+              <li>Developed a music-specific watermarking framework for copyright protection with PyTorch, which can preserve high quality for watermarked audio while remaining robust beyond prior approaches.</li>
+              <li>The framework restores high-frequency audio components based on the Nyquist rate and a music feature-guided embedding strategy, achieving imperceptible and reduced watermark placement in the host music.</li>
+              <li>Improved watermarked audio quality with 84% lower MCD (less distortion) and 3.3 dB higher SI-SNR, while maintaining strong robustness that achieves 91% detection accuracy on clean audio and 77% under distortion.</li>
+            </ul>
           </article>
 
-          <article class="timeline-item">
+          <article class="card timeline-item">
             <div class="timeline-head">
-              <div>
-                <strong>Research & Technical Projects</strong>
-                <span>Independent / Academic</span>
+              <div class="timeline-heading">
+                <h3 class="timeline-role">Machine Learning Engineer Intern</h3>
+                <p class="timeline-company">BMIT Research Group, The University of Sydney</p>
               </div>
-              <span>Ongoing</span>
+              <div class="timeline-meta">
+                <span class="timeline-location">Sydney, Australia</span>
+                <span class="timeline-date">Nov 2023 - Mar 2024</span>
+              </div>
             </div>
-            <p>
-              Developed projects in biomedical image translation, graph neural networks, multi-agent AI systems,
-              information retrieval, and music-related machine learning applications.
-            </p>
+            <ul class="timeline-points">
+              <li>Built deep learning models on 3D generative image models for cross-modality medical image translation between brain Magnetic Resonance Imaging (MRI) and Positron Emission Tomography (PET) scans.</li>
+              <li>Implemented and trained 3D GAN models (Adversarial U-Net, RevGAN, and BicycleGAN) in PyTorch, and optimised training with patch-based batching and memory-efficient pipeline under GPU memory constraints.</li>
+              <li>Adopted Adversarial U-Net as the best model for the MRI-to-PET reconstruction and BicycleGAN for the PET-to-MRI reconstruction, based on image similarity evaluation metrics of RMSE, PSNR, and SSIM.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-item">
+            <div class="timeline-head">
+              <div class="timeline-heading">
+                <h3 class="timeline-role">Data Scientist Intern</h3>
+                <p class="timeline-company">Sydney Precision Data Science Group, The University of Sydney</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-location">Sydney, Australia</span>
+                <span class="timeline-date">Jan 2023 - Mar 2023</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Conducted cancer status prediction analysis with machine learning methods using spatial omics features from tumour imaging mass cytometry (IMC) data.</li>
+              <li>Built an R pipeline for image processing and spatial analysis, including cell segmentation, intensity normalisation, and spatial feature extraction. Trained XGBoost, random forest, and SVM to discover significant spatial biomarkers.</li>
+              <li>Achieved an ROC of 0.69 for patient status prediction with a cross-validated model, and identified key spatial biomarkers (e.g., pairwise feature associations) through SHAP feature importance analysis.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-item">
+            <div class="timeline-head">
+              <div class="timeline-heading">
+                <h3 class="timeline-role">Academic Tutor in Applied Statistics and Machine Learning</h3>
+                <p class="timeline-company">School of Mathematics and Statistics, The University of Sydney</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-location">Sydney, Australia</span>
+                <span class="timeline-date">Jun 2023 - Jul 2024</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Taught tutorials for DATA1001 and STAT5003, covering data science and statistical machine learning topics such as bootstrapping, PCA, LDA, k-NN, regression, Random Forest, boosting, and MCMC.</li>
+              <li>Demonstrated strong public speaking, communication, and organisational skills through leading discussions, designing tutorial syllabi, and encouraging students' engagement.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-item">
+            <div class="timeline-head">
+              <div class="timeline-heading">
+                <h3 class="timeline-role">Data Analyst Intern</h3>
+                <p class="timeline-company">Lloyd's Insurance Company (China) Limited</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-location">Shanghai, China</span>
+                <span class="timeline-date">Jun 2021 - Sep 2021</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Analysed and created a dashboard for the reinsurance portfolios in the Lloyd's China Market with premium data to evaluate business distribution by insurance class, broker, and underwriter.</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <!-- <section id="projects">
       <div class="container">
         <h2 class="section-title">Selected Projects</h2>
         <p class="section-copy">
@@ -208,9 +270,9 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="research">
+    <!-- <section id="research">
       <div class="container">
         <h2 class="section-title">Research Interests</h2>
         <p class="section-copy">
@@ -232,14 +294,13 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <p class="section-copy">
-          This template is intentionally static and easy to customise. You can replace the placeholders below with your
-          real links, CV, email, GitHub, LinkedIn, publications, or portfolio items.
+          Feel free to reach out for AI engineering, data science, graduate opportunities, or research collaboration.
         </p>
         <div class="grid-2">
           <div class="card">
@@ -269,8 +330,8 @@
             </p>
           </div>
           <div class="card">
-            <h3>Customisation ideas</h3>
-            <p>Add a real headshot, project links, downloadable CV, publications section, blog posts, or a dark/light theme toggle.</p>
+            <h3>Open to</h3>
+            <p>AI engineering and data science opportunities, research collaborations, and conversations around machine learning, LLM systems, and music-related AI.</p>
           </div>
         </div>
         <div class="divider"></div>
