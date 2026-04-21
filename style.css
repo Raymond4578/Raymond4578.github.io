@@ -74,11 +74,10 @@ a {
 }
 
 .hero-content {
-    text-align: center;
+    text-align: left;
 }
 
 .hero-intro {
-    display: inline-block;
     text-align: left;
     margin-bottom: 1.3rem;
 }
@@ -95,20 +94,20 @@ a {
 .hero-role {
     font-size: 1rem;
     color: var(--muted);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.01em;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin: 0;
-    text-transform: uppercase;
+    text-transform: none;
     text-align: left;
 }
 
 .hero-tagline {
-    font-size: clamp(1.85rem, 3.8vw, 2.9rem);
-    line-height: 1.15;
-    max-width: 18ch;
-    margin: 0 auto 2.6rem;
+    font-size: clamp(1.65rem, 2.7vw, 2.25rem);
+    line-height: 1.2;
+    max-width: 32ch;
+    margin: 0 0 2.6rem;
     letter-spacing: -0.03em;
 }
 
@@ -208,6 +207,7 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.2rem;
     margin-top: 3rem;
+    justify-items: stretch;
 }
 
 .modern-stat {
